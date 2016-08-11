@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :update, :show]
+  before_action :set_article, only: [:edit, :update, :show, :destroy]
 
   def new
     @article = Article.new
