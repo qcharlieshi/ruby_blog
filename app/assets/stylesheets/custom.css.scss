@@ -1,13 +1,52 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+/* centered columns styles */
 
 
-hr {
-  border: none;
-  height: 5px;
-  /* Set the hr color */
-  color: #333; /* old IE */
-  background-color: #333; /* Modern Browsers */
+
+.maxheight {
+  max-height: 100px;
 }
+
+.overflow {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.well.minheight {
+  height: 120px;
+}
+
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+hr.regular {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #d3d3d3; /* old IE */
+  background-color: #d3d3d3; /* Modern Browsers */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+// Class
+.center {
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 #logo {
   padding-top: 20px;

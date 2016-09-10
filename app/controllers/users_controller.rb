@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = User.new()
   end
 
+
   def create
     @user = User.new(user_params)
 
@@ -12,12 +13,17 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+
+  def index
+    @users = User.paginate(page: params[:page], per_page: 5)
 
   end
 
+
   def edit
     @user = User.find(params[:id])
-
   end
 
   def update
@@ -32,6 +38,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
 
   end
 

@@ -1,0 +1,26 @@
+<h1 align ="center">User List</h1>
+
+
+<div align="center">
+  <%= will_paginate %>
+</div>
+
+  <% @users.each do |user| %>
+    <div class = "container">
+        <div class="col-md-3">
+        </div>
+        <div class="well col-md-6">
+          <div class="col-md-2">
+            <%= image_tag(user.avatar.url(:thumb), class: "img responsive img-thumbnail") %>
+          </div>
+          <div class ="col-md-6">
+            <%= link_to user.username, user_path(user) %> <small>has created: <%= pluralize(user.articles.count, "article") if user.articles %></small>
+          </div>
+        </div>
+      </div>
+  <% end %>
+
+
+<div align="center">
+  <%= will_paginate %>
+</div>
