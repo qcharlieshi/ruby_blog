@@ -13,7 +13,14 @@
 <body>
 <div class="center jumbotron">
   <h1 style="color:white;">Ruby Blog</h1>
-  <%= link_to "Sign up", "#", class: "btn btn-danger btn-lg btn-xlarge" %>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-4">
+      <%= link_to "Sign up", signup_path, class: "btn btn-danger btn-lg btn-xlarge btn-block" %>
+    </div>
+    <div class="col-md-2">
+      <%= link_to "Login", login_path, class: "btn btn-danger btn-lg btn-xlarge btn-block" %>
+    </div>
+  </div>
 </div>
 
 
